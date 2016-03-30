@@ -433,6 +433,7 @@ class CssToInlineStyles
 
         // remove comments
         $css = preg_replace('|/\*.*?\*/|', '', $css);
+        $css = str_replace(array('<!--', '-->'), '', $css);
 
         // remove spaces
         $css = preg_replace('/\s\s+/', ' ', $css);
